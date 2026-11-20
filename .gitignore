@@ -86,3 +86,5 @@ datasets/
 *.bak
 *.swp
 *~
+
+*.pth
