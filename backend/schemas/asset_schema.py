@@ -14,7 +14,7 @@ class AssetCreateSchema(Schema):
     serial_number = fields.Str(allow_none=True, validate=validate.Length(max=100))
     purchase_date = fields.Str(allow_none=True)  # ISO format
     purchase_price = fields.Float(allow_none=True, validate=validate.Range(min=0))
-    alert_threshold_days = fields.Int(validate=validate.Range(min=1, max=90), missing=7)
+    alert_threshold_days = fields.Int(validate=validate.Range(min=1, max=90), load_default=7)
 
 
 class AssetUpdateSchema(Schema):
@@ -26,11 +26,11 @@ class AssetUpdateSchema(Schema):
 
 class TelemetrySchema(Schema):
     """Schema for asset telemetry data."""
-    runtime_hours = fields.Float(validate=validate.Range(min=0), missing=0)
+    runtime_hours = fields.Float(validate=validate.Range(min=0), load_default=0)
     temperature_c = fields.Float(allow_none=True)
     vibration_level = fields.Float(allow_none=True, validate=validate.Range(min=0, max=100))
     fuel_efficiency = fields.Float(allow_none=True, validate=validate.Range(min=0, max=100))
-    error_codes = fields.List(fields.Str(), missing=[])
+    error_codes = fields.List(fields.Str(), load_default=[])
     oil_pressure = fields.Float(allow_none=True)
     battery_voltage = fields.Float(allow_none=True)
     engine_rpm = fields.Float(allow_none=True)
@@ -44,16 +44,16 @@ class MaintenanceLogSchema(Schema):
         validate=validate.OneOf(['ROUTINE', 'REPAIR', 'EMERGENCY', 'INSPECTION'])
     )
     description = fields.Str(required=True, validate=validate.Length(min=1, max=500))
-    parts_replaced = fields.List(fields.Str(), missing=[])
-    cost = fields.Float(validate=validate.Range(min=0), missing=0)
+    parts_replaced = fields.List(fields.Str(), load_default=[])
+    cost = fields.Float(validate=validate.Range(min=0), load_default=0)
     technician_name = fields.Str(allow_none=True, validate=validate.Length(max=200))
     technician_notes = fields.Str(allow_none=True, validate=validate.Length(max=1000))
     scheduled_date = fields.Str(allow_none=True)  # ISO format
     status = fields.Str(
         validate=validate.OneOf(['SCHEDULED', 'IN_PROGRESS', 'COMPLETED', 'CANCELLED']),
-        missing='SCHEDULED'
+        load_default='SCHEDULED'
     )
-    health_improvement = fields.Float(validate=validate.Range(min=0, max=30), missing=15)
+    health_improvement = fields.Float(validate=validate.Range(min=0, max=30), load_default=15)
 
 
 class AssetQuerySchema(Schema):
@@ -77,11 +77,11 @@ class LogisticsOrderSchema(Schema):
     requested_pickup_date = fields.Str(required=True)  # ISO format
     priority = fields.Str(
         validate=validate.OneOf(['URGENT', 'HIGH', 'NORMAL', 'LOW']),
-        missing='NORMAL'
+        load_default='NORMAL'
     )
     special_instructions = fields.Str(allow_none=True, validate=validate.Length(max=500))
-    requires_refrigeration = fields.Bool(missing=False)
-    requires_covered_transport = fields.Bool(missing=False)
+    requires_refrigeration = fields.Bool(load_default=False)
+    requires_covered_transport = fields.Bool(load_default=False)
     
     @validates('requested_pickup_date')
     def validate_pickup_date(self, value):

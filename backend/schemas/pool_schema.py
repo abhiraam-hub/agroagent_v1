@@ -13,7 +13,7 @@ class CreatePoolSchema(Schema):
     min_price_per_ton = fields.Float(required=True, validate=validate.Range(min=0.01))
     collection_location = fields.Str(required=True, validate=validate.Length(min=3, max=200))
     logistics_overhead_percent = fields.Float(
-        missing=5.0,
+        load_default=5.0,
         validate=validate.Range(min=0, max=50)
     )
     
@@ -28,7 +28,7 @@ class AddContributionSchema(Schema):
     pool_id = fields.Int(required=True, validate=validate.Range(min=1))
     quantity_tons = fields.Float(required=True, validate=validate.Range(min=0.01, max=1000))
     quality_grade = fields.Str(
-        missing='A',
+        load_default='A',
         validate=validate.OneOf(['A', 'B', 'C'])
     )
     
@@ -68,9 +68,9 @@ class ShareResourceSchema(Schema):
         validate=validate.OneOf(['harvester', 'tractor', 'storage', 'transport', 'other'])
     )
     resource_name = fields.Str(required=True, validate=validate.Length(min=2, max=200))
-    resource_value = fields.Float(missing=0.0, validate=validate.Range(min=0))
-    usage_cost_per_hour = fields.Float(missing=0.0, validate=validate.Range(min=0))
-    is_free_for_pool = fields.Bool(missing=True)
+    resource_value = fields.Float(load_default=0.0, validate=validate.Range(min=0))
+    usage_cost_per_hour = fields.Float(load_default=0.0, validate=validate.Range(min=0))
+    is_free_for_pool = fields.Bool(load_default=True)
 
 
 class ROIComparisonSchema(Schema):

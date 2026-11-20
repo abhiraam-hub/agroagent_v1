@@ -22,7 +22,7 @@ class CreatePolicySchema(Schema):
     crop_type = fields.Str(required=True)
     farm_location = fields.Str(required=True)
     farm_size = fields.Float(required=True, validate=validate.Range(min=0.1))
-    coverage_months = fields.Int(missing=6, validate=validate.Range(min=3, max=12))
+    coverage_months = fields.Int(load_default=6, validate=validate.Range(min=3, max=12))
 
 
 class SubmitClaimSchema(Schema):
@@ -31,7 +31,7 @@ class SubmitClaimSchema(Schema):
     claimed_amount = fields.Float(required=True, validate=validate.Range(min=1))
     incident_date = fields.DateTime(required=True)
     incident_description = fields.Str(required=True, validate=validate.Length(min=20))
-    evidence_photos = fields.List(fields.Str(), missing=[])
+    evidence_photos = fields.List(fields.Str(), load_default=[])
 
 
 class ProcessClaimSchema(Schema):
@@ -43,7 +43,7 @@ class ProcessClaimSchema(Schema):
 
 class RenewPolicySchema(Schema):
     """Schema for policy renewal."""
-    coverage_months = fields.Int(missing=6, validate=validate.Range(min=3, max=12))
+    coverage_months = fields.Int(load_default=6, validate=validate.Range(min=3, max=12))
     adjust_coverage = fields.Float(validate=validate.Range(min=10000))
 
 
