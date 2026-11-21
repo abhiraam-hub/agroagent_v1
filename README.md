@@ -25,29 +25,50 @@
 
 ## 📸 Platform Showcase
 
-### 📊 Unified Farmer Dashboard
 <p align="center">
-  <img src="images/screenshots/dashboard.jpg" width="90%" alt="AgroAgent Main Dashboard" />
+  <img src="images/screenshots/live_home.png" width="95%" alt="AgroAgent Main Dashboard" />
+  <br />
+  <em><strong>Figure 1:</strong> AgroAgent Unified Platform Interface — Live weather telemetry, crop advisory navigation, and smart farming tools.</em>
 </p>
 
-### 🎙️ Multilingual AI Voice Advisory (Gemini + gTTS)
+<br />
+
 <p align="center">
-  <img src="images/screenshots/ai_advisory.jpg" width="90%" alt="Multilingual AI Voice Advisory" />
+  <img src="images/screenshots/live_advisory_chat.png" width="95%" alt="Multilingual AI Voice Advisory" />
+  <br />
+  <em><strong>Figure 2:</strong> Multimodal & Multilingual Voice AI Advisor — Real-time conversational advisory powered by Google Gemini AI with speech synthesis in English, Hindi, and Telugu.</em>
 </p>
 
-### 🔬 Plant Disease Diagnosis & Remediation
+<br />
+
 <p align="center">
-  <img src="images/screenshots/disease_detection.jpg" width="90%" alt="Plant Disease Detection" />
+  <img src="images/screenshots/live_crop_recommendation.png" width="95%" alt="Crop Recommendation Engine" />
+  <br />
+  <em><strong>Figure 3:</strong> Precision Crop Recommendation Engine — Tailored crop varieties based on local soil chemistry (NPK, pH), moisture, and climate forecasts.</em>
 </p>
 
-### 🚜 Cooperative Yield Pooling & Logistics
+<br />
+
 <p align="center">
-  <img src="images/screenshots/logistics_pooling.jpg" width="90%" alt="Cooperative Yield Pooling & Logistics" />
+  <img src="images/screenshots/live_disease_detection.png" width="95%" alt="Plant Disease Diagnosis" />
+  <br />
+  <em><strong>Figure 4:</strong> Plant Pathology & Disease Diagnosis — Automated crop health analysis with instant organic and chemical remediation recommendations.</em>
 </p>
 
-### 🌾 Crop Planning, Soil Testing & Government Schemes
+<br />
+
 <p align="center">
-  <img src="images/screenshots/features_overview.jpg" width="90%" alt="Platform Feature Overview" />
+  <img src="images/screenshots/live_climate_dashboard.png" width="95%" alt="Climate Analytics Dashboard" />
+  <br />
+  <em><strong>Figure 5:</strong> Climate Resilience & Agro-Weather Dashboard — Micro-climate trend monitoring and real-time precipitation forecasts to guard against extreme weather.</em>
+</p>
+
+<br />
+
+<p align="center">
+  <img src="images/screenshots/live_logistics_hub.png" width="95%" alt="Cooperative Yield Pooling & Logistics" />
+  <br />
+  <em><strong>Figure 6:</strong> Cooperative Yield Pooling & Logistics Hub — Shared farm equipment booking, freight coordination, and aggregated marketplace distribution.</em>
 </p>
 
 ---
