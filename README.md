@@ -25,34 +25,29 @@
 
 ## 📸 Platform Showcase
 
+### 📊 Unified Farmer Dashboard
 <p align="center">
-  <img src="images/screenshots/dashboard.jpg" width="85%" alt="AgroAgent Main Dashboard" />
-  <br />
-  <em>Figure 1: AgroAgent Unified Farmer Dashboard with Weather, Analytics, and Smart Services</em>
+  <img src="images/screenshots/dashboard.jpg" width="90%" alt="AgroAgent Main Dashboard" />
 </p>
 
+### 🎙️ Multilingual AI Voice Advisory (Gemini + gTTS)
 <p align="center">
-  <img src="images/screenshots/ai_advisory.jpg" width="85%" alt="Multilingual AI Voice Advisory" />
-  <br />
-  <em>Figure 2: Voice-First Generative Advisory powered by Google Gemini AI with Speech Synthesis in English, Hindi, and Telugu</em>
+  <img src="images/screenshots/ai_advisory.jpg" width="90%" alt="Multilingual AI Voice Advisory" />
 </p>
 
+### 🔬 Plant Disease Diagnosis & Remediation
 <p align="center">
-  <img src="images/screenshots/disease_detection.jpg" width="85%" alt="Plant Disease Detection" />
-  <br />
-  <em>Figure 3: Image-Based Plant Disease Detection & Curative Remediation Recommendations</em>
+  <img src="images/screenshots/disease_detection.jpg" width="90%" alt="Plant Disease Detection" />
 </p>
 
+### 🚜 Cooperative Yield Pooling & Logistics
 <p align="center">
-  <img src="images/screenshots/logistics_pooling.jpg" width="85%" alt="Cooperative Yield Pooling & Logistics" />
-  <br />
-  <em>Figure 4: Cooperative Yield Pooling, Shared Farm Machinery (Tractors/Harvesters), and Freight Logistics</em>
+  <img src="images/screenshots/logistics_pooling.jpg" width="90%" alt="Cooperative Yield Pooling & Logistics" />
 </p>
 
+### 🌾 Crop Planning, Soil Testing & Government Schemes
 <p align="center">
-  <img src="images/screenshots/features_overview.jpg" width="85%" alt="Platform Feature Overview" />
-  <br />
-  <em>Figure 5: Complete Suite of Soil Testing, Crop Rotation Planning, and Government Scheme Access</em>
+  <img src="images/screenshots/features_overview.jpg" width="90%" alt="Platform Feature Overview" />
 </p>
 
 ---
